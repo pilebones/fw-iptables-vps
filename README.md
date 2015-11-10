@@ -2,14 +2,19 @@
 
 Firewall configuration with Iptables for VPS (like OVH)
 
-## Requirements
-apt-get install chkconfig 
+## Requirements 
+```bash
+apt-get install chkconfig
+```
 
 ## Optionnal requirements 
+```bash
 apt-get install fail2ban
+```
 
 ## How to install
 
+```bash
 su
 cd /root/
 git clone git@github.com:pilebones/fw-iptables-vps.git
@@ -19,6 +24,7 @@ vim ip-ban.bd
 vim ip-white-list.bd
 ./deploy.sh
 ./apply.sh
+```
 
 ## Limitations
 
