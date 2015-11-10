@@ -11,6 +11,23 @@ apt-get install chkconfig
 ```bash
 apt-get install fail2ban
 ```
+## Security notice
+
+Default allowed protocol :
+- SSH (port 22)
+- SMTP (port 25 : OUTPUT only)
+- DNS (port 53)
+- HTTP (port 80)
+- HTTPS (port 443: OUTPUT only)
+- GIT (port 9418)
+- OVH for the supervision (port 6100/6200)
+
+List of common attack this settings prevent :
+- TCP-SYN/FIN/ACK scan
+- TCP-XMAS scan
+- Ping of Death
+- Teardrop (fragmented UDP packets)
+- ...
 
 ## How to install
 
@@ -25,6 +42,8 @@ vim ip-white-list.bd
 ./deploy.sh
 ./apply.sh
 ```
+
+__Note :__ Don't miss to edit and update "ip-ban.bd" and "ip-white-list.bd" files by the future.
 
 ## Limitations
 
